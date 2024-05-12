@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/expanse/add">
+        <input type="text" name="expanse_name" placeholder="Name">
+        <input type="number" name="expanse_cost" placeholder="Cost">
+        <button>Yuborish</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Date</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i<expanse.length; i++) {%>
+                <tr>
+                    <td>
+                        <%= i+1 %>
+                    </td>
+                    <td>
+                        <%= expanse[i].expanse_name %>
+                    </td>
+                    <td>
+                        <%= expanse[i].expanse_cost %>
+                    </td>
+                    <td>
+                        <%= expanse[i].expanse_date %>
+                    </td>
+                    <td>
+                        <a href="/expanse/delete/<%=expanse[i].expanse_id %>">O'chirish</a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
