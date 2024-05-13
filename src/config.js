@@ -5,7 +5,7 @@ export const postgresConfig = {
     database: "budget",
     port: 5432,
     user: "postgres",
-    password: "82850406m"  
+    password: "828504sh"  
 }
 
 config();
